@@ -1,4 +1,4 @@
 # Grupo_MFR
-Rivera Magaña, Evelyn Yaneth
-Molina Santos, Jessica María
-Figuero Hernández, Edwin Ernesto
+Rivera Magaña, Evelyn Yaneth-
+Molina Santos, Jessica María-
+Figueroa Hernández, Edwin Ernesto
