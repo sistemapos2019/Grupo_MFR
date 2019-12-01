@@ -1,0 +1,59 @@
+{
+  "name": "detalleorden",
+  "plural": "detalleordenes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idOrden": {
+      "type": "number",
+      "required": true,
+      "id": 1
+    },
+    "idProducto": {
+      "type": "number",
+      "required": true
+    },
+    "cantidad": {
+      "type": "number",
+      "required": true
+    },
+    "precioUnitario": {
+      "type": "number",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "destroyAll": {
+        "description": "Delete all matching records.",
+        "accessType": "WRITE",
+        "accepts": [
+          {
+            "arg": "where",
+            "type": "object",
+            "description": "filter.where object"
+          },
+          {
+            "arg": "options",
+            "type": "object",
+            "http": "optionsFromRequest"
+          }
+        ],
+        "returns": {
+          "arg": "count",
+          "type": "object",
+          "description": "The number of instances deleted",
+          "root": true
+        },
+        "http": {
+          "verb": "del",
+          "path": "/"
+        }
+      }
+  }
+}

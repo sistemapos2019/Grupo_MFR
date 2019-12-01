@@ -1,0 +1,29 @@
+{
+  "name": "detallecompra",
+  "plural": "detallecompras",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "idCompra": {
+      "type": "number",
+      "required": true
+    },
+    "idProducto": {
+      "type": "number",
+      "required": true
+    },
+    "cantidad": {
+      "type": "number"
+    },
+    "precioUnitario": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

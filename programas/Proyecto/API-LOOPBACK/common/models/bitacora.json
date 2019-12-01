@@ -1,0 +1,58 @@
+{
+  "name": "bitacora",
+  "plural": "bitacoras",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "number",
+      "required": true
+    },
+    "idUsuario": {
+      "type": "number",
+      "required": true
+    },
+    "fecha": {
+      "type": "date",
+      "required": true
+    },
+    "suceso": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {
+    "destroyAll": {
+      "description": "Delete all matching records.",
+      "accessType": "WRITE",
+      "accepts": [
+        {
+          "arg": "where",
+          "type": "object",
+          "description": "filter.where object"
+        },
+        {
+          "arg": "options",
+          "type": "object",
+          "http": "optionsFromRequest"
+        }
+      ],
+      "returns": {
+        "arg": "count",
+        "type": "object",
+        "description": "The number of instances deleted",
+        "root": true
+      },
+      "http": {
+        "verb": "del",
+        "path": "/"
+      }
+    }
+  }
+}
